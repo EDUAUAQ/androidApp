@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/fondo"
+    tools:context=".register">
+
+    <TextView
+        android:id="@+id/textBanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banco EDUA"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/custom_text"
+        android:backgroundTint="@color/color2"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:text="Registrarse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textLastName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/input_text"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Apellidos"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+            <EditText
+                android:id="@+id/textFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_text"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Nombre(s)"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+            <EditText
+                android:id="@+id/textUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_text"
+                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Nombre de usuario"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+            <EditText
+                android:id="@+id/textCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_text"
+                android:drawableLeft="@drawable/mail"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Correo electrónico"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+            <EditText
+                android:id="@+id/textContrasenia"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_text"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+            <Button
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/color1"
+                android:text="Registrarse"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:cornerRadius="20dp" />
+
+            <TextView
+                android:id="@+id/textPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ya tienes cuenta?"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/textRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:onClick="irLogin"
+                android:text="Inicia sesion"
+                android:textAlignment="center"
+                android:textColor="@color/hipervinculo"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
