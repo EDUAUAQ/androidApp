@@ -48,7 +48,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/textLastName"
+                android:id="@+id/textUsername"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
@@ -56,8 +56,38 @@
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:ems="10"
-                android:hint="Apellidos"
+                android:hint="Nombre de usuario"
                 android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+            <EditText
+                android:id="@+id/textMail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_text"
+                android:drawableLeft="@drawable/mail"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Correo electrónico"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"/>
+
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_text"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"/>
@@ -78,7 +108,7 @@
                 android:textColorHint="@color/black"/>
 
             <EditText
-                android:id="@+id/textUsername"
+                android:id="@+id/textLastName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
@@ -86,44 +116,14 @@
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:ems="10"
-                android:hint="Nombre de usuario"
+                android:hint="Apellidos"
                 android:inputType="text"
-                android:paddingLeft="8dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
-
-            <EditText
-                android:id="@+id/textCorreo"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/input_text"
-                android:drawableLeft="@drawable/mail"
-                android:drawablePadding="8dp"
-                android:ems="10"
-                android:hint="Correo electrónico"
-                android:inputType="text"
-                android:paddingLeft="8dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
-
-            <EditText
-                android:id="@+id/textContrasenia"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/input_text"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="8dp"
-                android:ems="10"
-                android:hint="Contraseña"
-                android:inputType="textPassword"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"/>
 
             <Button
-                android:id="@+id/btnIngresar"
+                android:id="@+id/btnRegistrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -143,16 +143,17 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"/>
 
-            <TextView
-                android:id="@+id/textRegistrar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-2dp"
+            <Button
+                android:id="@+id/btnInicioSesion"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/color1"
                 android:onClick="irLogin"
-                android:text="Inicia sesion"
-                android:textAlignment="center"
-                android:textColor="@color/hipervinculo"
-                android:textSize="12sp" />
+                android:text="Iniciar sesion"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:cornerRadius="20dp" />
 
         </LinearLayout>
 
