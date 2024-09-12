@@ -9,11 +9,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -21,9 +23,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.jetbrains.annotations.Contract;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -65,8 +69,8 @@ public class login extends AppCompatActivity {
             }
         });
     }
-    private void login(String username, String password){
-        String url = "http://10.0.2.2:3000/user/login";
+    private void login(String username, String password) {
+        String url = "http://192.168.1.70:3000/user/login";
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -99,22 +103,26 @@ public class login extends AppCompatActivity {
                 }
         ) {
             @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("user_name", username);
-                params.put("user_password", password);
-                return params;
+            public byte[] getBody() throws AuthFailureError {
+                try {
+                    JSONObject jsonBody = new JSONObject();
+                    jsonBody.put("user_name", username);
+                    jsonBody.put("user_password", password);
+                    return jsonBody.toString().getBytes("utf-8");
+                } catch (JSONException | UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                    return null;
+                }
             }
 
-            @Override
-            public Map<String, String> getHeaders() {
-                Map<String, String> headers = new HashMap<>();
-                headers.put("Content-Type", "application/json");
-                return headers;
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
             }
         };
 
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(postRequest);
     }
+
+
 }

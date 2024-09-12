@@ -21,6 +21,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -71,8 +75,8 @@ public class register extends AppCompatActivity {
             }
         });
     }
-    private void register(String username, String mail, String password, String firstName, String lastName){
-        String url = "http://10.0.2.2:3000/user/signup";
+    private void register(String username, String mail, String password, String firstName, String lastName) {
+        String url = "http://192.168.1.70:3000/user/signup";
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -83,7 +87,7 @@ public class register extends AppCompatActivity {
 
                         Intent intent = new Intent(register.this, index.class);
                         startActivity(intent);
-                        finish();  // Opcional: Finaliza la actividad actual para que el usuario no regrese a la pantalla de registro al presionar el botón Atrás
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {
@@ -95,25 +99,29 @@ public class register extends AppCompatActivity {
                 }
         ) {
             @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("user_name", username);
-                params.put("user_mail", mail);
-                params.put("user_password", password);
-                params.put("first_name", firstName);
-                params.put("last_name", lastName);
-                return params;
+            public byte[] getBody() {
+                try {
+                    JSONObject jsonBody = new JSONObject();
+                    jsonBody.put("user_name", username);
+                    jsonBody.put("user_mail", mail);
+                    jsonBody.put("user_password", password);
+                    jsonBody.put("first_name", firstName);
+                    jsonBody.put("last_name", lastName);
+                    return jsonBody.toString().getBytes("utf-8");
+                } catch (JSONException | UnsupportedEncodingException e) {
+                    Log.e("JSONError", "Error en la creación del JSON", e);
+                    return null;
+                }
             }
 
             @Override
-            public Map<String, String> getHeaders() {
-                Map<String, String> headers = new HashMap<>();
-                headers.put("Content-Type", "application/json");
-                return headers;
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
             }
         };
 
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(postRequest);
     }
+
 }
