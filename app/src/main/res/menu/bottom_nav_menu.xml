@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Inicio"
-        android:icon="@drawable/home"
-        android:id="@+id/inicio"/>
-    <item android:title="CrearCuenta"
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_accounts"
         android:icon="@drawable/create"
-        android:id="@+id/crearCuenta"/>
-    <item android:title="Transacciones"
+        android:title="Accounts" />
+
+    <item
+        android:id="@+id/navigation_transactions"
         android:icon="@drawable/transaction"
-        android:id="@+id/transacciones"/>
-    <item android:title="Perfil"
+        android:title="Transactions" />
+
+    <item
+        android:id="@+id/navigation_profile"
         android:icon="@drawable/profile"
-        android:id="@+id/perfil"/>
+        android:title="Profile" />
+
 </menu>

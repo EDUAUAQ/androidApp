@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/fondo"
+    android:background="#222831"
     tools:context=".register">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="Banco EDUA"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="#76ABAE"
         android:textSize="34sp"
         android:textStyle="bold"
         android:layout_marginBottom="40dp"/>
@@ -25,8 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:background="@drawable/custom_text"
-        android:backgroundTint="@color/color2"
+        android:background="#31363F"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
 
@@ -43,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="#76ABAE"
                 android:textSize="34sp"
                 android:textStyle="bold" />
 
@@ -60,7 +59,7 @@
                 android:inputType="text"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="#76ABAE"/>
 
             <EditText
                 android:id="@+id/textMail"
@@ -75,7 +74,7 @@
                 android:inputType="text"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="#76ABAE"/>
 
             <EditText
                 android:id="@+id/textPassword"
@@ -90,7 +89,7 @@
                 android:inputType="textPassword"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="#76ABAE"/>
 
             <EditText
                 android:id="@+id/textFirstName"
@@ -105,7 +104,7 @@
                 android:inputType="text"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="#76ABAE"/>
 
             <EditText
                 android:id="@+id/textLastName"
@@ -120,17 +119,17 @@
                 android:inputType="text"
                 android:paddingLeft="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColorHint="#76ABAE"/>
 
             <Button
                 android:id="@+id/btnRegistrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/color1"
+                android:backgroundTint="#76ABAE"
                 android:text="Registrarse"
                 android:textSize="20sp"
-                android:textColor="@color/black"
+                android:textColor="#222831"
                 app:cornerRadius="20dp" />
 
             <TextView
@@ -140,7 +139,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Ya tienes cuenta?"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="#76ABAE"
                 android:textSize="12sp"/>
 
             <Button
@@ -148,10 +147,10 @@
                 android:layout_width="140dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/color1"
+                android:backgroundTint="#76ABAE"
                 android:onClick="irLogin"
-                android:text="Iniciar sesion"
-                android:textColor="@color/black"
+                android:text="Iniciar sesión"
+                android:textColor="#222831"
                 android:textSize="15sp"
                 app:cornerRadius="20dp" />
 
