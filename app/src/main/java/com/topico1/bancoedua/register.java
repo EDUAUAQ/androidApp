@@ -76,7 +76,7 @@ public class register extends AppCompatActivity {
         });
     }
     private void register(String username, String mail, String password, String firstName, String lastName) {
-        String url = "http://192.168.1.70:3000/user/signup";
+        String url = "http://192.168.3.11:3000/user/signup";
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {

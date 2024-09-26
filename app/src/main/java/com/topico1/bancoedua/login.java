@@ -70,7 +70,7 @@ public class login extends AppCompatActivity {
         });
     }
     private void login(String username, String password) {
-        String url = "http://192.168.1.70:3000/user/login";
+        String url = "http://192.168.3.11:3000/user/login";
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {

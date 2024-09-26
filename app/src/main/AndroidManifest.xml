@@ -16,13 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".transactions"
-            android:exported="false" />
-        <activity
-            android:name=".createAccount"
-            android:exported="false" />
-        <activity
-            android:name=".profile"
+            android:name=".index"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -45,10 +39,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".index"
-            android:exported="false"
-            android:label="@string/title_activity_index" />
     </application>
 
 </manifest>
