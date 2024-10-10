@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ui.home.TransferenciaActivity">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulario de Transferencia"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#76ABAE"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/textCuentaDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de Cuenta Destino:"
+            android:textSize="18sp"
+            android:textColor="#EEEEEE"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editCuentaDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el número de cuenta"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textColor="#EEEEEE"
+            android:textColorHint="#B0BEC5"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textMonto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monto a Transferir:"
+            android:textSize="18sp"
+            android:textColor="#EEEEEE"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editMonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el monto"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textColor="#EEEEEE"
+            android:textColorHint="#B0BEC5"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción de la Transferencia:"
+            android:textSize="18sp"
+            android:textColor="#EEEEEE"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Opcional"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:textColor="#EEEEEE"
+            android:textColorHint="#B0BEC5"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnTransferir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transferir"
+            android:textSize="18sp"
+            android:textColor="#EEEEEE"
+            android:backgroundTint="#76ABAE"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5252"
+            android:onClick="irInicio"
+            android:padding="16dp"
+            android:text="Regresar"
+            android:textColor="#EEEEEE"
+            android:textSize="18sp" />
+
+</LinearLayout>

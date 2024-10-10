@@ -45,6 +45,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.11.0")
     implementation ("com.google.android.material:material:1.9.0")
     implementation ("com.android.volley:volley:1.2.1")
+    implementation ("androidx.security:security-crypto:1.1.0-alpha04")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

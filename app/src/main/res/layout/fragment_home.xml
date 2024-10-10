@@ -12,7 +12,7 @@
         android:id="@+id/textSaludo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hola, Usuario"
+        android:text="Hola, "
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#76ABAE"
@@ -31,14 +31,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Transferencia"
-            android:textSize="18sp"
-            android:textColor="#EEEEEE"
+            android:background="@drawable/rounded_button"
             android:backgroundTint="#76ABAE"
-            android:padding="16dp"
             android:drawableLeft="@drawable/transaction"
             android:drawablePadding="8dp"
-            android:background="@drawable/rounded_button"/>
+            android:onClick="irTransferencia"
+            android:padding="16dp"
+            android:text="Transferencia"
+            android:textColor="#EEEEEE"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnHistorial"

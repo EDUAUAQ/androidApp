@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ui.profile.ServicioActivity">
+
+        <!-- Título del formulario -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reportar un Error"
+            android:textColor="#76ABAE"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Campo para Nombre -->
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:textColor="#EEEEEE"
+            android:backgroundTint="#76ABAE"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campo para Correo Electrónico -->
+        <EditText
+            android:id="@+id/editTextCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:textColor="#EEEEEE"
+            android:backgroundTint="#76ABAE"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campo para Descripción del Error -->
+        <EditText
+            android:id="@+id/editTextDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción del Error"
+            android:textColor="#EEEEEE"
+            android:backgroundTint="#76ABAE"
+            android:layout_marginBottom="16dp"
+            android:minHeight="100dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine" />
+
+        <!-- Botón para Enviar el Reporte -->
+        <Button
+            android:id="@+id/btnEnviarReporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="Enviar Reporte"
+            android:textColor="#222831"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón para Regresar al Perfil -->
+    <Button
+        android:id="@+id/btnRegresarPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:onClick="irPerfil"
+        android:text="Regresar al Perfil"
+        android:textColor="#222831"
+        android:textSize="16sp" />
+</LinearLayout>
